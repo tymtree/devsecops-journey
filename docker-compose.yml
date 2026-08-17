@@ -1,0 +1,15 @@
+services:
+  nginx:
+    image: nginx:latest
+    ports:
+      - "8080:80"
+
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: devpass
+    volumes:
+        - postgres_data:/var/lib/postgresql
+
+volumes:
+  postgres_data:
