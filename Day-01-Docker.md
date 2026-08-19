@@ -30,3 +30,26 @@ docker compose up -d --build
 docker compose down
 
 
+## Git command learned yet
+| Command                   | Purpose                   |
+| ------------------------- | ------------------------- |
+| `git --version`           | Git version check         |
+| `git config`              | Git configuration         |
+| `git init`                | Repository initialize     |
+| `git status`              | Current status            |
+| `git add`                 | Staging                   |
+| `git commit`              | Local commit              |
+| `git log`                 | Commit history            |
+| `git branch`              | Branch list               |
+| `git switch`              | Branch change             |
+| `git remote -v`           | Remote check              |
+| `git remote add origin`   | GitHub connect            |
+| `git push`                | GitHub par changes bhejna |
+| `git pull`                | GitHub se changes lana    |
+| `git clone`               | Repository copy karna     |
+| `git diff`                | Changes compare karna     |
+| `.gitignore`              | Unwanted files exclude    |
+| `.github/workflows/*.yml` | GitHub Actions workflow   |
+
+
+
