@@ -7,6 +7,10 @@ app = Flask(__name__)
 def home():
     return "Hello from Python Docker App!"
 
+@app.route("/health")
+def health():
+    return "Status Healthy"
+
 @app.route("/db")
 def db_test():
     conn = psycopg.connect(
@@ -18,4 +22,5 @@ def db_test():
     conn.close()
     return "Python app connected to PostgreSQL database!"
 
-app.run(host="0.0.0.0", port=5000)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
