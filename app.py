@@ -7,6 +7,10 @@ app = Flask(__name__)
 def home():
     return "Hello from Python Docker App!"
 
+@app.route("/health")
+def health():
+    return "Status Healthy"
+
 @app.route("/db")
 def db_test():
     conn = psycopg.connect(
