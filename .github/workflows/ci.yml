@@ -22,7 +22,7 @@ jobs:
           python-version: "3.12"
 
       - name: Install dependencies
-        run: pip install flask psycopg[binary]
+        run: pip install -r requirements.txt
 
       - name: Check Python app
         run: python -m py_compile app.py
