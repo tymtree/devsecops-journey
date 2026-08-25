@@ -1,5 +1,6 @@
 from flask import Flask
 import psycopg
+import os
 
 app = Flask(__name__)
 
@@ -17,7 +18,7 @@ def db_test():
         host="postgres",
         dbname="postgres",
         user="postgres",
-        password="devpass"
+        password=os.getenv("POSTGRES_PASSWORD")
     )
     conn.close()
     return "Python app connected to PostgreSQL database!"

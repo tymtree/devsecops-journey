@@ -12,7 +12,7 @@ services:
   postgres:
     image: postgres
     environment:
-      POSTGRES_PASSWORD: devpass
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     volumes:
         - postgres_data:/var/lib/postgresql
 
