@@ -32,3 +32,6 @@ jobs:
 
       - name: Security scan
         run: bandit -r . -c .bandit
+
+      - name: Dependency vulnerability scan
+        run: pip-audit

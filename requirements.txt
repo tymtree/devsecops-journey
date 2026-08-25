@@ -2,3 +2,4 @@ Flask
 psycopg[binary]
 pytest
 bandit
+pip-audit
