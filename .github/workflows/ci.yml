@@ -61,7 +61,7 @@ jobs:
 
       - name: Push Docker image to GHCR
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        run:
+        run: |
           docker tag devsecops-journey-python-app:${{ github.sha }} ghcr.io/${{ github.repository }}:${{ github.sha }}
           docker push ghcr.io/${{ github.repository }}:${{ github.sha }}
 
