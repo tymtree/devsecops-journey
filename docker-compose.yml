@@ -4,10 +4,15 @@ services:
     ports:
       - "8080:80"
 
+  python-app:
+    build: .
+    ports:
+      - "5001:5000"
+
   postgres:
     image: postgres
     environment:
-      POSTGRES_PASSWORD: devpass
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     volumes:
         - postgres_data:/var/lib/postgresql
 
